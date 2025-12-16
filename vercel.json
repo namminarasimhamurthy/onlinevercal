@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "milk/asgi.py",
-      "use": "@vercel/python"
+      "src": "milk/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.11.3",
+        "maxLambdaSize": "15mb"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "milk/asgi.py"
+      "dest": "milk/wsgi.py"
     }
   ]
 }
