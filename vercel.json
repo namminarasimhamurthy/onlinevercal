@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "exam/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "buildCommand": "bash build.sh"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "exam/wsgi.py"
+    }
+  ]
+}
