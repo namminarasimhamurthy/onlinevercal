@@ -1,0 +1,82 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right top, #dfe9f3, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.4s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+}
+
+.register-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #002349;
+  text-align: center;
+}
+
+.form-control {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #003566;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 53, 102, 0.1);
+}
+
+.btn-primary {
+  background-color: #003566;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #002244;
+}
+
+.alert {
+  font-size: 0.95rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 576px) {
+  .register-title {
+    font-size: 1.5rem;
+  }
+
+  .register-card {
+    padding: 30px 20px;
+  }
+}
